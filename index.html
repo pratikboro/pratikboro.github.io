@@ -4,7 +4,6 @@
   <title>Pratik Boro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Apple-like Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -18,24 +17,32 @@
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #111;
+      line-height: 1.6;
     }
 
+    /* ===== NAVBAR ===== */
     nav {
       display: flex;
       justify-content: space-between;
-      padding: 25px 60px;
+      align-items: center;
+      padding: 25px 8%;
       font-size: 14px;
       letter-spacing: 1px;
+      flex-wrap: wrap;
     }
 
-    nav .logo {
+    .logo {
       font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
     }
 
     nav a {
       text-decoration: none;
       color: #666;
-      margin-left: 30px;
       transition: 0.3s;
     }
 
@@ -43,8 +50,9 @@
       color: #000;
     }
 
+    /* ===== HERO ===== */
     .hero {
-      height: 85vh;
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -54,16 +62,15 @@
     }
 
     h1 {
-      font-size: 3.8rem;
+      font-size: clamp(2rem, 5vw, 3.8rem);
       font-weight: 600;
       margin-bottom: 20px;
     }
 
     .subtitle {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       color: #555;
       max-width: 600px;
-      line-height: 1.6;
     }
 
     .btn {
@@ -83,18 +90,28 @@
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
       font-size: 13px;
       color: #999;
     }
 
+    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
+
       nav {
+        flex-direction: column;
+        gap: 15px;
         padding: 20px;
       }
 
-      h1 {
-        font-size: 2.5rem;
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 60px 20px;
       }
     }
 
@@ -105,7 +122,7 @@
 
   <nav>
     <div class="logo">Pratik Boro</div>
-    <div>
+    <div class="nav-links">
       <a href="#">Work</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
