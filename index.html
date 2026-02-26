@@ -3,88 +3,126 @@
 <head>
   <title>Pratik Boro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Apple-like Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      color: white;
-      text-align: center;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111;
     }
 
     nav {
-      padding: 20px;
       display: flex;
-      justify-content: center;
-      gap: 40px;
+      justify-content: space-between;
+      padding: 25px 60px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    nav .logo {
+      font-weight: 600;
     }
 
     nav a {
-      color: #aaa;
       text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 2px;
+      color: #666;
+      margin-left: 30px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: white;
+      color: #000;
     }
 
     .hero {
-      height: 80vh;
+      height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      padding: 0 20px;
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #bbb;
+      font-size: 3.8rem;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
     .btn {
-      padding: 12px 25px;
-      border: 1px solid white;
+      margin-top: 30px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      border: 1px solid #111;
       text-decoration: none;
-      color: white;
-      transition: 0.3s ease;
+      color: #111;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: white;
-      color: black;
+      background: #111;
+      color: white;
     }
 
     footer {
-      padding: 20px;
-      font-size: 12px;
-      color: #666;
+      text-align: center;
+      padding: 40px;
+      font-size: 13px;
+      color: #999;
     }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
   <nav>
-    <a href="#">HOME</a>
-    <a href="#">PROJECTS</a>
-    <a href="#">CONTACT</a>
+    <div class="logo">Pratik Boro</div>
+    <div>
+      <a href="#">Work</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
   </nav>
 
   <section class="hero">
-    <h1>Pratik Boro</h1>
-    <p>Graphic Designer • Creative Thinker • Future Developer</p>
-    <a href="#" class="btn">View My Work</a>
+    <h1>Design with Clarity.</h1>
+    <p class="subtitle">
+      I create minimal, thoughtful and modern visual experiences.
+      Graphic Designer exploring digital product design and development.
+    </p>
+    <a href="#" class="btn">View Projects</a>
   </section>
 
   <footer>
-    © 2026 Pratik Boro. All rights reserved.
+    © 2026 Pratik Boro
   </footer>
 
 </body>
