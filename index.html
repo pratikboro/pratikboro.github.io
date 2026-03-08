@@ -7,112 +7,137 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#f5f5f7,#e8e8ed);
+      color:#111;
+      line-height:1.6;
+      min-height:100vh;
     }
 
     /* ===== NAVBAR ===== */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 8%;
-      font-size: 14px;
-      letter-spacing: 1px;
-      flex-wrap: wrap;
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 8%;
+      font-size:14px;
+      letter-spacing:1px;
+      flex-wrap:wrap;
     }
 
-    .logo {
-      font-weight: 600;
+    .logo{
+      font-weight:600;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 30px;
+    .nav-links{
+      display:flex;
+      gap:30px;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #666;
-      transition: 0.3s;
+    nav a{
+      text-decoration:none;
+      color:#666;
+      transition:0.3s;
     }
 
-    nav a:hover {
-      color: #000;
+    nav a:hover{
+      color:#000;
     }
 
     /* ===== HERO ===== */
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
+
+    .hero{
+      min-height:80vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 20px;
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 600;
-      margin-bottom: 20px;
+    h1{
+      font-size:clamp(2rem,5vw,3.8rem);
+      font-weight:600;
+      margin-bottom:20px;
     }
 
-    .subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: #555;
-      max-width: 600px;
+    .subtitle{
+      font-size:clamp(1rem,2.5vw,1.2rem);
+      color:#555;
+      max-width:600px;
     }
 
-    .btn {
-      margin-top: 30px;
-      padding: 12px 30px;
-      border-radius: 30px;
-      border: 1px solid #111;
-      text-decoration: none;
-      color: #111;
-      transition: 0.3s;
+    /* ===== LIQUID GLASS BUTTON ===== */
+
+    .btn{
+      margin-top:35px;
+      padding:14px 36px;
+      border-radius:40px;
+
+      background:rgba(255,255,255,0.35);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+
+      border:1px solid rgba(255,255,255,0.6);
+
+      color:#111;
+      text-decoration:none;
+      font-weight:500;
+
+      box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.8),
+        0 8px 30px rgba(0,0,0,0.08);
+
+      transition:all 0.35s ease;
     }
 
-    .btn:hover {
-      background: #111;
-      color: white;
+    .btn:hover{
+      transform:translateY(-3px);
+
+      background:rgba(255,255,255,0.5);
+
+      box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.9),
+        0 18px 40px rgba(0,0,0,0.15);
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 13px;
-      color: #999;
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      font-size:13px;
+      color:#999;
     }
 
     /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+    @media (max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
       }
 
-      .nav-links {
-        flex-direction: column;
-        gap: 15px;
+      .nav-links{
+        flex-direction:column;
+        gap:15px;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 60px 20px;
+      .hero{
+        min-height:auto;
+        padding:60px 20px;
       }
+
     }
 
   </style>
@@ -122,6 +147,7 @@
 
   <nav>
     <div class="logo">Pratik Boro</div>
+
     <div class="nav-links">
       <a href="#">Work</a>
       <a href="#">About</a>
@@ -130,12 +156,16 @@
   </nav>
 
   <section class="hero">
+
     <h1>Design with Clarity.</h1>
+
     <p class="subtitle">
       I create minimal, thoughtful and modern visual experiences.
       Graphic Designer exploring digital product design and development.
     </p>
+
     <a href="#" class="btn">View Projects</a>
+
   </section>
 
   <footer>
